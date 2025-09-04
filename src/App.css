@@ -1,3 +1,15 @@
+:root{
+  --dark_blue: #012E40;
+  --medium_blue: #024959;
+  --green_blue: #026773;
+  --light_green_blue: #3CA6A6;
+  --beije: #F2E3D5;
+  --light_beije: #FFFAF5;
+  --gray: #908C8A;
+  --black: #1A1A1A;  
+}
+
+
 .App {
   text-align: center;
 }
