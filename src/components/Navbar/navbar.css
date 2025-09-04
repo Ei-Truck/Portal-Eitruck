@@ -1,0 +1,13 @@
+nav{
+    display: flex;
+    background-color: var(--medium_blue);
+    height: 8vh;
+    align-items: center;
+    justify-content: space-between;
+    #logo{
+        width: 8vw;
+    }
+    #icone_perfil{
+        width: 2vw;
+    }
+}
