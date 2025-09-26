@@ -4,10 +4,21 @@ nav{
     height: 8vh;
     align-items: center;
     justify-content: space-between;
-    #logo{
+    .division{
+        display: flex;
+         align-items: center;
+         justify-content: center;
+        width: 10%;
+        height: 100%;
+    }
+    #first-section{
+        #logo{
         width: 8vw;
+        }
     }
-    #icone_perfil{
-        width: 2vw;
-    }
+    #second-section{
+        #icone_perfil{
+            width: 2vw;
+        }
+    }   
 }

@@ -1,0 +1,35 @@
+aside{
+    width: 5%;
+    height: 92vh;
+    background-color: var(--dark_blue);
+    transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    #icons{
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+        height: 50%;    
+        Link{
+            margin: 0;
+            display: flex;
+        }
+        .icons-div:hover{
+            background-color: var(--green_blue);
+            .text{
+                margin-left: 10px;
+            }
+        }
+    }
+    
+}
+aside:hover{
+    width: 16%;
+}
+
+/* Animação */
+@keyframes teste{
+    from{
+        margin-left:0px;
+    }to{
+        margin-left: 10px;
+    }
+}

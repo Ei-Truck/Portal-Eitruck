@@ -4,8 +4,13 @@ import icone_perfil from "../../assets/icone_perfil.png"
 export default function Navbar(){
     return(
         <nav>
-            <img src={logo_eitruck} id="logo"/>
-            <img src={icone_perfil} id="icone_perfil"/>
+            <div id="first-section" class="division">
+                <img src={logo_eitruck} id="logo"/>
+
+            </div>
+            <div id="second-section" class="division">
+                <img src={icone_perfil} id="icone_perfil"/>
+            </div>
         </nav>
     )
-}
+}   
