@@ -1,4 +1,7 @@
 aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 5%;
     height: 92vh;
     background-color: var(--dark_blue);
@@ -10,26 +13,41 @@ aside{
         height: 50%;    
         Link{
             margin: 0;
+        }
+        .icons-div{
+            .icon{
+                width: 1.75vw;
+                margin-left: 25px;
+            }
+            overflow: hidden;
             display: flex;
         }
         .icons-div:hover{
             background-color: var(--green_blue);
             .text{
-                margin-left: 10px;
+                margin-left: 35px;
             }
         }
     }
+    div{
+        display: flex;
+        overflow: hidden;
+        margin-bottom: 20px ;
+        #bt-logout{
+            margin-left: 25px ;
+            width: 1.75vw;
+        }
+        text-decoration: none;
+    }
+    .text{
+        text-decoration: none;
+        color: white;
+        margin-left: 25px;
+        transition: ease-in-out 0.2s;
+    }
+    
     
 }
 aside:hover{
     width: 16%;
-}
-
-/* Animação */
-@keyframes teste{
-    from{
-        margin-left:0px;
-    }to{
-        margin-left: 10px;
-    }
 }
