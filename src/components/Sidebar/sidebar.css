@@ -9,18 +9,23 @@ aside{
     #icons{
         flex-direction: column;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         height: 50%;    
-        Link{
+        a{
+            display: flex;
             margin: 0;
+            text-decoration: none;
         }
         .icons-div{
+            margin: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
             .icon{
                 width: 1.75vw;
                 margin-left: 25px;
             }
             overflow: hidden;
-            display: flex;
         }
         .icons-div:hover{
             background-color: var(--green_blue);
@@ -29,24 +34,32 @@ aside{
             }
         }
     }
-    div{
+    a{
         display: flex;
-        overflow: hidden;
-        margin-bottom: 20px ;
+        margin: 10px;
+        color: transparent;
         #bt-logout{
-            margin-left: 25px ;
+            margin-left: 15px;
             width: 1.75vw;
+            transition: ease-in-out 0.2s;
         }
         text-decoration: none;
+        transition: ease-in-out;
     }
+    a:hover #bt-logout{
+        filter: saturate(900)
+    }
+    a:hover #text-logout{
+        color: red;
+        margin-left: 25px;
+    }
+    
     .text{
         text-decoration: none;
         color: white;
         margin-left: 25px;
         transition: ease-in-out 0.2s;
     }
-    
-    
 }
 aside:hover{
     width: 16%;

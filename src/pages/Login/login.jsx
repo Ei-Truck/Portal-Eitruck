@@ -1,6 +1,7 @@
 import Navbar from "../../components/Navbar/navbar"
 import foto_clular from "../../assets/foto_celular.svg"
 import "../Login/login_style.css"
+import { Link } from "react-router-dom"
 export default function Login(){
     return (
         <>
@@ -25,8 +26,10 @@ export default function Login(){
                             id="forgot-password">Esqueceu a senha?</a>
                         </div>
                         <div>
+                            <Link to={"/home"}>
                             <input type="submit" className="input"
                             />
+                            </Link>
                         </div>
                         
                     </form>
