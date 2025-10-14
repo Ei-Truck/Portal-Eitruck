@@ -1,8 +1,29 @@
 import Navbar from "../../components/Navbar/navbar"
-import foto_clular from "../../assets/foto_celular.svg"
+import foto_clular from "../../assets/mao_celular.svg"
 import "../Login/login_style.css"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import login from "../../service/userService.js"
+
 export default function Login(){
+    const navigate = useNavigate();
+    async function logar(id_user, id_password){
+        const user = document.getElementById(`${id_user}`)
+        const password = document.getElementById(`${id_password}`)
+        if(user.value == "" || password.value == ""){
+            user.style.border = 'solid red 2px'
+            password.style.border = 'solid red 2px'
+            setInterval(()=>{
+                user.style.border = 'solid lightgray 1px'
+                password.style.border = 'solid lightgray 1px'
+            }, 3000)
+
+        }else{
+            if (login(user.value, password.value)){
+                navigate("/home")
+            }
+        }
+    }
+
     return (
         <>
             <Navbar/>
@@ -16,29 +37,35 @@ export default function Login(){
                         <div>
                             <p>User</p>
                             <input type="text" className="input"
-                            placeholder="User"/>
+                            placeholder="User"
+                            id="user"/>
                         </div>
                         <div>
                             <p>Password</p>
-                            <input type="password" className="input"
+                            <input type="password" 
+                            id="password"
+                            className="input"
                             placeholder="Password"/>
                             <a href="#"
                             id="forgot-password">Esqueceu a senha?</a>
                         </div>
                         <div>
-                            <Link to={"/home"}>
-                            <input type="submit" className="input"
+                            <input 
+                            type="submit" 
+                            className="input"
+                            onClick={(event) =>{
+                                event.preventDefault()
+                                logar("user", "password")
+                            }}
                             />
-                            </Link>
                         </div>
-                        
                     </form>
                     <hr />
                     <div id="continue-with">
                         <h3>Continuar com:</h3>
+                        {/* <img src="" alt="" />
                         <img src="" alt="" />
-                        <img src="" alt="" />
-                        <img src="" alt="" />
+                        <img src="" alt="" /> */}
                     </div>
                 </div>
             </div>

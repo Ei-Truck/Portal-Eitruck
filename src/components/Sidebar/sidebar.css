@@ -35,7 +35,9 @@ aside{
         }
     }
     a{
+        height: 100%;
         display: flex;
+        align-items: center;
         margin: 10px;
         color: transparent;
         #bt-logout{

@@ -11,12 +11,12 @@
 #image {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     width: 55%;
     background-color: var(--green_blue);
     overflow: hidden;
     img{
-        width: 75%;
+        width: 65%;
     }
 }
 #register {

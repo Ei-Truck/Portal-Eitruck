@@ -8,8 +8,8 @@ export default function AppRoutes() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login/>} />
-        <Route path="/teste" element={<Grafico/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
+        <Route path="/teste" element={<Grafico/>}></Route>
       </Routes>
     </BrowserRouter>
   );
