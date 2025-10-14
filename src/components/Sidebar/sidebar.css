@@ -1,4 +1,7 @@
 aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 5%;
     height: 92vh;
     background-color: var(--dark_blue);
@@ -6,30 +9,60 @@ aside{
     #icons{
         flex-direction: column;
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         height: 50%;    
-        Link{
-            margin: 0;
+        a{
             display: flex;
+            margin: 0;
+            text-decoration: none;
+        }
+        .icons-div{
+            margin: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .icon{
+                width: 1.75vw;
+                margin-left: 25px;
+            }
+            overflow: hidden;
         }
         .icons-div:hover{
             background-color: var(--green_blue);
             .text{
-                margin-left: 10px;
+                margin-left: 35px;
             }
         }
     }
+    a{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        color: transparent;
+        #bt-logout{
+            margin-left: 15px;
+            width: 1.75vw;
+            transition: ease-in-out 0.2s;
+        }
+        text-decoration: none;
+        transition: ease-in-out;
+    }
+    a:hover #bt-logout{
+        filter: saturate(900)
+    }
+    a:hover #text-logout{
+        color: red;
+        margin-left: 25px;
+    }
     
+    .text{
+        text-decoration: none;
+        color: white;
+        margin-left: 25px;
+        transition: ease-in-out 0.2s;
+    }
 }
 aside:hover{
     width: 16%;
-}
-
-/* Animação */
-@keyframes teste{
-    from{
-        margin-left:0px;
-    }to{
-        margin-left: 10px;
-    }
 }

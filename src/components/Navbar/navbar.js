@@ -1,6 +1,6 @@
 import "../Navbar/navbar.css"
 import logo_eitruck from "../../assets/logo_eitruck.svg"
-import icone_perfil from "../../assets/icone_perfil.png"
+import icone_perfil from "../../assets/icone_perfil.svg"
 export default function Navbar(){
     return(
         <nav>
