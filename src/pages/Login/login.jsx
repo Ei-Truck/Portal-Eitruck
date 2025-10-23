@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar/navbar"
 import foto_clular from "../../assets/mao_celular.svg"
 import "../Login/login_style.css"
 import { useNavigate } from "react-router-dom"
-import login from "../../service/userService.js"
+import {login} from "../../service/userService.js"
 
 export default function Login(){
     const navigate = useNavigate();

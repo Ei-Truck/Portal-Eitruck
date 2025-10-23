@@ -1,0 +1,151 @@
+section{
+    display: flex;
+    #general-profile-info{
+        position: relative; 
+        height: 91vh;
+        /* border: solid red 5px;   */
+        width: 98vw;
+        display: flex;
+        flex-direction: column;
+        #profile-photo{
+            margin: 15px;
+            display: flex;
+            align-items: center;
+            /* border: solid green 5px; */
+            height: 12%;
+                #profile-image-name{
+                    height: 100%;
+                    width: 25%;
+                    margin-left: 1%;
+                    /* border: 5px solid orange; */
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-evenly;
+                    display: flex;
+                    img{
+                        width: 25%;
+                    }
+                    #name-position{
+                        width: 60%;
+                        /* border: 5px solid #000; */
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 1.2em;
+                    }
+                button{
+                    width: 100px;
+                    height: 20px;
+                }
+            }
+        }
+        #profile-info{
+            display: flex;
+            /* border: solid blue 2px; */
+            height: 80vh;
+            justify-content: space-around;
+            #infos{
+                width: 40%;
+                /* border: solid green 2px; */
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                #infos-form{
+                    display: flex;
+                    align-items: center;
+                    /* justify-content: space-evenly; */
+                    flex-direction: column;
+                    /* border: solid red 2px; */
+                    width: 80%;
+                    height: 80%;
+                    input{
+                        border-radius: 8px;
+                        width: 90%;
+                        height:3.8em;
+                        background-color: white;
+                        border: solid 3px var(--dark_blue);
+                        overflow: visible;
+                    }
+                    label{
+                        padding: 4px;
+                        background-color: white;
+                        top: 3.5%;
+                        position: relative;
+                        margin-left: 40px ;
+                        align-self: flex-start;
+                        color: var(--dark_blue);
+                    }
+                    #separator{
+                        /* margin: 10px; */
+                        height: 32%;
+                        /* border: solid blue 2px; */
+                        display: flex;
+                        width: 90%;
+                        display: flex;
+                        justify-content: space-between;
+                        .separator-div{
+                            flex-direction: column;
+                            align-items: center;
+                            height: 80%;
+                            display: flex;
+                            justify-content: center;
+                            width: 48%;
+                            label{
+                                padding: 2px;
+                                position: relative;
+                                top: 15px;
+                                margin-left:18px ;
+                            }
+                            input{
+                                background-color: white;
+                                width: 100%;
+                                height: 3.8em;
+                            }
+                        }
+
+                    }
+                    button{
+                        width: 50%;
+                        height: 12%;
+                        border-radius: 8px ;
+                        color: white;
+                        font-weight: 400;
+                        font-size: 1.2em;
+                        background-color: var(--light_green_blue);
+                        border: none;
+                        transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s;
+                    }
+                    button:hover{
+                        background-color: var(--dark_blue);
+                    }
+                }
+                #since{
+                    width: 80%;
+                    height: 8%;
+                    color: white;
+                    border-radius: 4px;
+                    background-color: var(--light_green_blue);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            #transaction-console{
+                display: flex;
+                justify-content: center;
+                width: 35%;
+                height: 90%;
+                background-color: var(--dark_blue);
+                border-radius: 8px;
+                h1{
+                    color: white;
+                    margin: 20px;
+                }
+                .transaction-div{
+
+                }
+            }
+        }
+    }
+}
