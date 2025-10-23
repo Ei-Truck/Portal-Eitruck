@@ -17,6 +17,10 @@ nav{
         }
     }
     #second-section{
+        display: flex;
+        justify-content: space-evenly;
+        width: 15%;
+        color: white;
         #icone_perfil{
             width: 2vw;
         }
