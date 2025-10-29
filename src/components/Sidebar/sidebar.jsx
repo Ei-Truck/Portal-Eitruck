@@ -11,7 +11,7 @@ export default function Sidebar(){
      <aside>
         <div id="icons">
             <div className="icons-div">
-                <Link to="/teste">
+                <Link to="/home">
                 <img src={icon1} className="icon"/>
                     <h3 className="text">Gráficos#1</h3>
                 </Link>
