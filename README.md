@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Portal EiTruck
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bem‑vindo ao **Portal EiTruck** — uma aplicação web front‑end desenvolvida com Create React App e destinada ao portal de usuários/gestores da Ei‑Truck.
 
-## Available Scripts
+## 📝 Visão Geral
 
-In the project directory, you can run:
+Este projeto tem como objetivo disponibilizar uma interface web que permita:
 
-### `npm start`
+* visualização e gestão de dados de transporte/logística para a Ei‑Truck;
+* interface responsiva para usuários finais e gestores;
+* integração futura com APIs back‑end para autenticação, dados de frota, histórico de viagens, dashboards etc.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Tecnologias Utilizadas
+Tecnologia	Função
+React	Framework front-end
+JavaScript / ES6+	Lógica e estrutura do portal
+HTML5 / CSS3	Estrutura e estilo das páginas
+npm	Gerenciador de pacotes
+Create React App	Estrutura inicial do projeto e scripts prontos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🏎️ Como Rodar o Projeto (em Desenvolvimento)
 
-### `npm test`
+No terminal, na pasta do projeto, execute:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# instalar dependências
+npm install
 
-### `npm run build`
+# iniciar servidor de desenvolvimento
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Depois de `npm start`, abra no navegador: [http://localhost:3000](http://localhost:3000)
+A página irá recarregar quando você fizer alterações.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Outros comandos úteis
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* `npm test` — executa os testes (se houver)
+* `npm run build` — gera a versão de produção na pasta `build`, minificada, otimizada
+* `npm run eject` — **atenção**: operação irreversível que expõe toda configuração (webpack, etc) caso você queira customizar profundamente
 
-### `npm run eject`
+## 📁 Estrutura do Projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Portal-Eitruck/
+├── .github/
+│   └── PULL_REQUEST_TEMPLATE.md
+│
+├── node_modules/
+│
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+│
+├── src/
+│   ├── assets/
+│   │
+│   ├── components/
+│   │   ├── Navbar/
+│   │   │   ├── navbar.css
+│   │   │   └── navbar.jsx
+│   │   │
+│   │   └── Sidebar/
+│   │       ├── sidebar.css
+│   │       └── sidebar.jsx
+│   │
+│   ├── pages/
+│   │   ├── Grafico1/
+│   │   │   └── grafico1.js
+│   │   │
+│   │   ├── Graficos/
+│   │   │   ├── graficos.style.css
+│   │   │   └── Graficos.jsx
+│   │   │
+│   │   ├── Home/
+│   │   │   ├── home.style.css
+│   │   │   └── home.jsx
+│   │   │
+│   │   ├── InserirVideo/
+│   │   │   ├── inserir_video.style.css
+│   │   │   └── inserir_video.jsx
+│   │   │
+│   │   ├── ListaVideos/
+│   │   │   ├── lista_videos.style.css
+│   │   │   └── lista_videos.jsx
+│   │   │
+│   │   ├── Login/
+│   │   │   ├── login.style.css
+│   │   │   └── login.jsx
+│   │   │
+│   │   └── Perfil/
+│   │       ├── profile.style.css
+│   │       └── profile.jsx
+│   │
+│   └── routes/
+│       └── routes.jsx
+│
+├── package.json
+├── package-lock.json
+└── README.md
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📄 Licença
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Este projeto está licenciado sob a **MIT License** — consulte o arquivo `LICENSE` para mais detalhes.
 
-## Learn More
+## 🧑‍💻 Autores
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* DanieTogSevero — Desenvolvimento inicial
+* Contribuição do projeto Ei Truck!!
