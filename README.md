@@ -1,51 +1,71 @@
-# Portal EiTruck
+# 🚛 Portal EiTruck
 
-Bem‑vindo ao **Portal EiTruck** — uma aplicação web front‑end desenvolvida com Create React App e destinada ao portal de usuários/gestores da Ei‑Truck.
+Bem-vindo ao **Portal EiTruck** — uma aplicação web front-end desenvolvida com **React** (via Create React App), voltada para o **portal de usuários e gestores da Ei-Truck**.
+
+---
 
 ## 📝 Visão Geral
 
-Este projeto tem como objetivo disponibilizar uma interface web que permita:
+O projeto tem como objetivo disponibilizar uma **interface web moderna e responsiva** que permita:
 
-* visualização e gestão de dados de transporte/logística para a Ei‑Truck;
-* interface responsiva para usuários finais e gestores;
-* integração futura com APIs back‑end para autenticação, dados de frota, histórico de viagens, dashboards etc.
+* Visualização e gestão de dados de transporte e logística;
+* Acesso otimizado para usuários finais e gestores;
+* Integração futura com **APIs back-end** para autenticação, dados de frota, histórico de viagens, dashboards, entre outros.
+
+---
 
 ## 🚀 Tecnologias Utilizadas
-Tecnologia	Função
-React	Framework front-end
-JavaScript / ES6+	Lógica e estrutura do portal
-HTML5 / CSS3	Estrutura e estilo das páginas
-npm	Gerenciador de pacotes
-Create React App	Estrutura inicial do projeto e scripts prontos
 
-## 🏎️ Como Rodar o Projeto (em Desenvolvimento)
+| Tecnologia            | Função                                 |
+| --------------------- | -------------------------------------- |
+| **React**             | Framework front-end principal          |
+| **JavaScript (ES6+)** | Lógica e estrutura do portal           |
+| **HTML5 / CSS3**      | Estrutura e estilo das páginas         |
+| **npm**               | Gerenciador de pacotes                 |
+| **Create React App**  | Estrutura inicial e scripts do projeto |
 
-No terminal, na pasta do projeto, execute:
+---
+
+## 🏎️ Como Rodar o Projeto (Ambiente de Desenvolvimento)
+
+No terminal, dentro da pasta do projeto:
 
 ```bash
-# instalar dependências
+# Instalar dependências
 npm install
 
-# iniciar servidor de desenvolvimento
+# Iniciar servidor de desenvolvimento
 npm start
 ```
 
-Depois de `npm start`, abra no navegador: [http://localhost:3000](http://localhost:3000)
-A página irá recarregar quando você fizer alterações.
+Após iniciar, abra o navegador em:
+👉 [http://localhost:3000](http://localhost:3000)
 
-### Outros comandos úteis
+A aplicação recarrega automaticamente ao salvar alterações.
 
-* `npm test` — executa os testes (se houver)
-* `npm run build` — gera a versão de produção na pasta `build`, minificada, otimizada
-* `npm run eject` — **atenção**: operação irreversível que expõe toda configuração (webpack, etc) caso você queira customizar profundamente
+---
+
+## 🧰 Outros Comandos Úteis
+
+```bash
+# Executa testes (se houver)
+npm test
+
+# Gera versão de produção (minificada/otimizada)
+npm run build
+
+# Exibe configurações internas (irreversível)
+npm run eject
+```
+
+---
 
 ## 📁 Estrutura do Projeto
 
+```
 Portal-Eitruck/
 ├── .github/
 │   └── PULL_REQUEST_TEMPLATE.md
-│
-├── node_modules/
 │
 ├── public/
 │   ├── index.html
@@ -54,12 +74,10 @@ Portal-Eitruck/
 │
 ├── src/
 │   ├── assets/
-│   │
 │   ├── components/
 │   │   ├── Navbar/
 │   │   │   ├── navbar.css
 │   │   │   └── navbar.jsx
-│   │   │
 │   │   └── Sidebar/
 │   │       ├── sidebar.css
 │   │       └── sidebar.jsx
@@ -67,27 +85,21 @@ Portal-Eitruck/
 │   ├── pages/
 │   │   ├── Grafico1/
 │   │   │   └── grafico1.js
-│   │   │
 │   │   ├── Graficos/
 │   │   │   ├── graficos.style.css
 │   │   │   └── Graficos.jsx
-│   │   │
 │   │   ├── Home/
 │   │   │   ├── home.style.css
 │   │   │   └── home.jsx
-│   │   │
 │   │   ├── InserirVideo/
 │   │   │   ├── inserir_video.style.css
 │   │   │   └── inserir_video.jsx
-│   │   │
 │   │   ├── ListaVideos/
 │   │   │   ├── lista_videos.style.css
 │   │   │   └── lista_videos.jsx
-│   │   │
 │   │   ├── Login/
 │   │   │   ├── login.style.css
 │   │   │   └── login.jsx
-│   │   │
 │   │   └── Perfil/
 │   │       ├── profile.style.css
 │   │       └── profile.jsx
@@ -98,13 +110,21 @@ Portal-Eitruck/
 ├── package.json
 ├── package-lock.json
 └── README.md
+```
 
+---
 
 ## 📄 Licença
 
 Este projeto está licenciado sob a **MIT License** — consulte o arquivo `LICENSE` para mais detalhes.
 
+---
+
 ## 🧑‍💻 Autores
 
-* DanieTogSevero — Desenvolvimento inicial
-* Contribuição do projeto Ei Truck!!
+* **DanielTogSevero** — Desenvolvimento inicial
+* Contribuição da equipe **Ei-Truck**
+
+---
+
+> 💡 Dica: mantenha o README atualizado conforme novas features e páginas forem adicionadas.
