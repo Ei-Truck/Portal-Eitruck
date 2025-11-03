@@ -10,7 +10,6 @@ O projeto tem como objetivo disponibilizar uma **interface web moderna e respons
 
 * Visualização e gestão de dados de transporte e logística;
 * Acesso otimizado para usuários finais e gestores;
-* Integração futura com **APIs back-end** para autenticação, dados de frota, histórico de viagens, dashboards, entre outros.
 
 ---
 
@@ -124,5 +123,4 @@ Este projeto está licenciado sob a **MIT License** — consulte o arquivo `LICE
 
 * **DanielTogSevero** — Desenvolvimento inicial
 * Contribuição da equipe **Ei-Truck**
-
 
