@@ -9,6 +9,7 @@ export default function Login(){
     async function logar(id_user, id_password){
         const user = document.getElementById(`${id_user}`)
         const password = document.getElementById(`${id_password}`)
+        const senhaRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/;
         if(user.value == "" || password.value == ""){
             user.style.border = 'solid red 2px'
             password.style.border = 'solid red 2px'
@@ -17,9 +18,20 @@ export default function Login(){
                 password.style.border = 'solid lightgray 1px'
             }, 3000)
 
-        }else{
-            if (login(user.value, password.value)){
-                navigate("/home")
+        
+        } else if (!senhaRegex.test(password.value)) {
+            password.style.border = 'solid red 2px';
+            alert("Senha inválida! Deve ter no mínimo 8 caracteres, pelo menos 1 número e 1 caractere especial.");
+            setTimeout(() => {
+                password.style.border = 'solid lightgray 1px';
+            }, 3000);
+
+    }else{
+            const success = await login(user.value, password.value);
+            if (success) {
+                navigate("/home");
+            } else {
+                alert("Usuário ou senha incorretos");
             }
         }
     }
@@ -61,12 +73,6 @@ export default function Login(){
                         </div>
                     </form>
                     <hr />
-                    <div id="continue-with">
-                        <h3>Continuar com:</h3>
-                        {/* <img src="" alt="" />
-                        <img src="" alt="" />
-                        <img src="" alt="" /> */}
-                    </div>
                 </div>
             </div>
         </>

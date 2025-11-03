@@ -3,6 +3,7 @@ import logo_eitruck from "../../assets/logo_eitruck.svg";
 import icone_perfil from "../../assets/icone_perfil.svg";
 import { useEffect, useState } from "react";
 import { findById } from "../../service/userService";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [user, setUser] = useState(null);
@@ -26,10 +27,10 @@ export default function Navbar() {
         <img src={logo_eitruck} id="logo" alt="Logo EiTruck" />
       </div>
 
-      <div id="second-section" className="division">
+      <Link id="second-section"className="division" to="/perfil">
         <img src={icone_perfil} id="icone_perfil" alt="Ícone de perfil" />
         <h3>{user?.nomeCompleto || "Usuário"}</h3>
-      </div>
+      </Link>
     </nav>
   );
 }
