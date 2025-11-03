@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+# 🚛 Portal EiTruck
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bem-vindo ao **Portal EiTruck** — uma aplicação web front-end desenvolvida com **React** (via Create React App), voltada para o **portal de usuários e gestores da Ei-Truck**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📝 Visão Geral
 
-### `npm start`
+O projeto tem como objetivo disponibilizar uma **interface web moderna e responsiva** que permita:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Visualização e gestão de dados de transporte e logística;
+* Acesso otimizado para usuários finais e gestores;
+* Integração futura com **APIs back-end** para autenticação, dados de frota, histórico de viagens, dashboards, entre outros.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Tecnologias Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Tecnologia            | Função                                 |
+| --------------------- | -------------------------------------- |
+| **React**             | Framework front-end principal          |
+| **JavaScript (ES6+)** | Lógica e estrutura do portal           |
+| **HTML5 / CSS3**      | Estrutura e estilo das páginas         |
+| **npm**               | Gerenciador de pacotes                 |
+| **Create React App**  | Estrutura inicial e scripts do projeto |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🏎️ Como Rodar o Projeto (Ambiente de Desenvolvimento)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+No terminal, dentro da pasta do projeto:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Instalar dependências
+npm install
 
-### `npm run eject`
+# Iniciar servidor de desenvolvimento
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Após iniciar, abra o navegador em:
+👉 [http://localhost:3000](http://localhost:3000)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A aplicação recarrega automaticamente ao salvar alterações.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🧰 Outros Comandos Úteis
 
-## Learn More
+```bash
+# Executa testes (se houver)
+npm test
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Gera versão de produção (minificada/otimizada)
+npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Exibe configurações internas (irreversível)
+npm run eject
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📁 Estrutura do Projeto
 
-### Analyzing the Bundle Size
+```
+Portal-Eitruck/
+├── .github/
+│   └── PULL_REQUEST_TEMPLATE.md
+│
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Navbar/
+│   │   │   ├── navbar.css
+│   │   │   └── navbar.jsx
+│   │   └── Sidebar/
+│   │       ├── sidebar.css
+│   │       └── sidebar.jsx
+│   │
+│   ├── pages/
+│   │   ├── Grafico1/
+│   │   │   └── grafico1.js
+│   │   ├── Graficos/
+│   │   │   ├── graficos.style.css
+│   │   │   └── Graficos.jsx
+│   │   ├── Home/
+│   │   │   ├── home.style.css
+│   │   │   └── home.jsx
+│   │   ├── InserirVideo/
+│   │   │   ├── inserir_video.style.css
+│   │   │   └── inserir_video.jsx
+│   │   ├── ListaVideos/
+│   │   │   ├── lista_videos.style.css
+│   │   │   └── lista_videos.jsx
+│   │   ├── Login/
+│   │   │   ├── login.style.css
+│   │   │   └── login.jsx
+│   │   └── Perfil/
+│   │       ├── profile.style.css
+│   │       └── profile.jsx
+│   │
+│   └── routes/
+│       └── routes.jsx
+│
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📄 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Este projeto está licenciado sob a **MIT License** — consulte o arquivo `LICENSE` para mais detalhes.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🧑‍💻 Autores
 
-### Deployment
+* **DanielTogSevero** — Desenvolvimento inicial
+* Contribuição da equipe **Ei-Truck**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> 💡 Dica: mantenha o README atualizado conforme novas features e páginas forem adicionadas.
