@@ -1,0 +1,94 @@
+header {
+  background-color: var(--dark_blue);
+  color: var(--beije);
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.page-container {
+  display: flex;
+}
+
+.table-container {
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  height: 450px; /* altura fixa da tabela */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tabela ocupa toda a largura */
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* mantém as colunas proporcionais */
+}
+
+/* Cabeçalho fixo */
+.table-container thead {
+  background-color: var(--medium_blue);
+  color: var(--light_beije);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Corpo rolável */
+.table-scroll {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Define tamanhos de colunas */
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray);
+  word-wrap: break-word; /* quebra palavras grandes, como URLs */
+  white-space: normal; /* permite quebrar linhas */
+}
+
+/* Define largura específica pra cada coluna (opcional) */
+th:nth-child(1), td:nth-child(1) {
+  width: 40%; /* URL maior */
+}
+
+th:nth-child(2), td:nth-child(2),
+th:nth-child(3), td:nth-child(3),
+th:nth-child(4), td:nth-child(4),
+th:nth-child(5), td:nth-child(5) {
+  width: 15%;
+}
+
+/* Hover */
+tbody tr:hover {
+  background-color: var(--light_beije);
+  transition: 0.2s;
+}
+
+a {
+  color: var(--green_blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+.leve { background-color: #3CA6A6; }
+.media { background-color: #F2B705; }
+.grave { background-color: #D97904; }
+.gravissima { background-color: #BF0404; }

@@ -1,4 +1,4 @@
-import api from "./api";
+import {api} from "./api";
 
 async function login(user, password) {
   try {
@@ -11,7 +11,7 @@ async function login(user, password) {
 
     sessionStorage.setItem("id", data.id);
     sessionStorage.setItem("token", data.token);
-
+    console.log(sessionStorage.getItem("id"), sessionStorage.getItem("token"))
     return await findById(); 
   } catch (error) {
       console.error("Erro ao fazer login:", error);

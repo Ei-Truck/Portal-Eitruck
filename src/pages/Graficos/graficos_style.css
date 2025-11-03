@@ -1,0 +1,191 @@
+/* --- Container Principal (Desktop/Layout Inicial) --- */
+
+/* Novo container para encapsular Sidebar e Main */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  padding-top: 60px; /* Espaço para a Navbar fixa */
+  background-color: #f0f2f5;
+}
+
+/* Sidebar (Desktop) */
+.sidebar-container {
+  width: 70px; /* Largura padrão para desktop */
+  background-color: #003147;
+  flex-shrink: 0; /* Garante que a sidebar não encolha */
+  padding-top: 20px;
+  box-sizing: border-box;
+  position: sticky; /* Mantém visível ao rolar */
+  top: 60px; /* Abaixo da navbar */
+  height: calc(100vh - 60px); /* Altura total menos navbar */
+  overflow-y: auto; /* Scroll se necessário */
+}
+
+/* --- Container dos Gráficos (Main Content) --- */
+.charts-container {
+  flex: 1; /* Permite que o container de gráficos ocupe o espaço restante */
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+  padding: 40px;
+  justify-content: center; /* Centraliza os gráficos quando há espaço */
+  align-items: flex-start; /* Alinha no topo */
+  box-sizing: border-box;
+}
+
+/* Caixa de Gráfico Individual */
+.chart-box {
+  flex: 1 1 450px;
+  max-width: 600px;
+  min-width: 300px; /* Largura mínima */
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* Garante que o canvas do gráfico se ajuste à sua caixa */
+.chart-box canvas {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 300px;
+}
+
+/* =======================================
+   RESPONSIVIDADE (MOBILE / TABLET)
+   ======================================= */
+
+/* Responsividade para Tablets e Mobiles (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Layout principal */
+  .dashboard-layout {
+    flex-direction: column; /* Sidebar e Main empilham */
+    padding-top: 60px; /* Navbar permanece no topo */
+    padding-bottom: 80px; /* Espaço para bottom nav */
+  }
+
+  /* Sidebar vira bottom navigation */
+  .sidebar-container {
+    position: fixed; /* Fixa na tela */
+    bottom: 0; /* Fica no bottom */
+    left: 0;
+    right: 0;
+    width: 100%; /* Largura total */
+    height: 70px; /* Altura do bottom nav */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around; /* Distribui itens horizontalmente */
+    align-items: center;
+    background-color: #003147;
+    border-top: 1px solid #00506b; /* Borda sutil */
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Scroll horizontal se necessário */
+  }
+
+  /* Container dos gráficos */
+  .charts-container {
+    padding: 20px;
+    gap: 15px;
+    padding-bottom: 90px; /* Espaço extra para bottom nav */
+  }
+
+  /* Caixa de gráfico: Ocupa a largura total */
+  .chart-box {
+    flex: 1 1 100%;
+    max-width: none;
+    min-width: auto;
+  }
+}
+
+/* Responsividade para Celulares (max-width: 768px) */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+
+  .charts-container {
+    padding: 15px 10px;
+    gap: 15px;
+  }
+
+  .chart-box {
+    padding: 15px;
+    min-height: auto;
+    border-radius: 8px;
+  }
+
+  /* Ajusta a altura do gráfico em telas muito pequenas */
+  .chart-box canvas {
+    min-height: 250px !important;
+  }
+
+  /* Bottom nav otimizada para mobile */
+  .sidebar-container {
+    height: 70px;
+    padding: 5px 0;
+  }
+
+  /* Aumenta área de toque dos botões */
+  .sidebar-container a,
+  .sidebar-container button {
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    min-width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+}
+
+/* Responsividade para telas muito pequenas (max-width: 480px) */
+@media (max-width: 480px) {
+  .dashboard-layout {
+    padding-top: 60px;
+  }
+
+  .charts-container {
+    padding: 10px 8px;
+    gap: 12px;
+  }
+
+  .chart-box {
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .chart-box canvas {
+    min-height: 220px !important;
+  }
+
+  /* Compacta ainda mais a bottom nav */
+  .sidebar-container {
+    height: 65px;
+  }
+
+  .sidebar-container a,
+  .sidebar-container button {
+    font-size: 1rem;
+    padding: 6px 8px;
+    min-width: 45px;
+    gap: 2px;
+  }
+}
+
+/* Responsividade para telas grandes (min-width: 1440px) */
+@media (min-width: 1440px) {
+  .charts-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+
+  .chart-box {
+    max-width: 700px;
+  }
+}
