@@ -125,6 +125,4 @@ Este projeto está licenciado sob a **MIT License** — consulte o arquivo `LICE
 * **DanielTogSevero** — Desenvolvimento inicial
 * Contribuição da equipe **Ei-Truck**
 
----
 
-> 💡 Dica: mantenha o README atualizado conforme novas features e páginas forem adicionadas.
