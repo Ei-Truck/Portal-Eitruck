@@ -32,7 +32,7 @@ export default function Sidebar(){
             <div className="icons-div">
             <Link to="/inserir-video">
                 <img src={icon4} className="icon"/>
-                <h3 className="text">Gráficos#4</h3>
+                <h3 className="text">Inserir Mídia</h3>
             </Link>
             </div>
         </div>

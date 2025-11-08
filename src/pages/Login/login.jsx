@@ -2,31 +2,33 @@ import Navbar from "../../components/Navbar/navbar"
 import foto_clular from "../../assets/mao_celular.svg"
 import "../Login/login_style.css"
 import { useNavigate } from "react-router-dom"
-import {login} from "../../service/userService.js"
+import { login } from "../../service/userService.js"
 
-export default function Login(){
+export default function Login() {
     const navigate = useNavigate();
-    async function logar(id_user, id_password){
+
+    async function logar(id_user, id_password) {
         const user = document.getElementById(`${id_user}`)
         const password = document.getElementById(`${id_password}`)
-        const senhaRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/;
-        if(user.value == "" || password.value == ""){
+
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@empresa$/;
+
+        if (user.value === "" || password.value === "") {
             user.style.border = 'solid red 2px'
             password.style.border = 'solid red 2px'
-            setInterval(()=>{
+            setTimeout(() => {
                 user.style.border = 'solid lightgray 1px'
                 password.style.border = 'solid lightgray 1px'
             }, 3000)
-
-        
-        } else if (!senhaRegex.test(password.value)) {
-            password.style.border = 'solid red 2px';
-            alert("Senha inválida! Deve ter no mínimo 8 caracteres, pelo menos 1 número e 1 caractere especial.");
+        } 
+        else if (!emailRegex.test(user.value)) {
+            user.style.border = 'solid red 2px';
+            alert("Email inválido! O email deve terminar com '@empresa'.");
             setTimeout(() => {
-                password.style.border = 'solid lightgray 1px';
+                user.style.border = 'solid lightgray 1px';
             }, 3000);
-
-    }else{
+        }
+        else {
             const success = await login(user.value, password.value);
             if (success) {
                 navigate("/home");
@@ -38,7 +40,7 @@ export default function Login(){
 
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <div id="body">
                 <div id="image">
                     <img src={foto_clular} alt="" />
@@ -48,27 +50,31 @@ export default function Login(){
                     <form action="">
                         <div>
                             <p>User</p>
-                            <input type="text" className="input"
-                            placeholder="User"
-                            id="user"/>
+                            <input
+                                type="text"
+                                className="input"
+                                placeholder="User"
+                                id="user"
+                            />
                         </div>
                         <div>
                             <p>Password</p>
-                            <input type="password" 
-                            id="password"
-                            className="input"
-                            placeholder="Password"/>
-                            <a href="#"
-                            id="forgot-password">Esqueceu a senha?</a>
+                            <input
+                                type="password"
+                                id="password"
+                                className="input"
+                                placeholder="Password"
+                            />
+                            <a href="#" id="forgot-password">Esqueceu a senha?</a>
                         </div>
                         <div>
-                            <input 
-                            type="submit" 
-                            className="input"
-                            onClick={(event) =>{
-                                event.preventDefault()
-                                logar("user", "password")
-                            }}
+                            <input
+                                type="submit"
+                                className="input"
+                                onClick={(event) => {
+                                    event.preventDefault()
+                                    logar("user", "password")
+                                }}
                             />
                         </div>
                     </form>
