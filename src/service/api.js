@@ -1,14 +1,14 @@
   import axios from "axios";
 
   const api = axios.create({
-    baseURL: "http://localhost:8080",
+    baseURL: "https://api-sql-47zm.onrender.com",
     headers: {
       "Content-Type": "application/json",
     }
   });
 
   const api_concat = axios.create({
-    baseURL: "http://localhost:8000",
+    baseURL: "http://54.158.162.13:8000",
     headers: { "Content-Type": "application/json" }
   });
 
